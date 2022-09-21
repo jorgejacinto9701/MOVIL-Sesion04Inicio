@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
         spnPais = findViewById(R.id.spnRegEdiPais);
         spnPais.setAdapter(adaptador);
 
-        cargaUsuarios();
+        cargaPais();
     }
 
-    public void cargaUsuarios(){
+    public void cargaPais(){
         Call<List<Pais>> call = servicePais.listaPais();
         call.enqueue(new Callback<List<Pais>>() {
             @Override
